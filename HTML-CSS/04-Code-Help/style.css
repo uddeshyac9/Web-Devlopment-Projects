@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope&family=Poppins&family=Raleway&family=Roboto&display=swap");
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+body,
+html {
+  font-family: "Poppins", sans-serif;
+}
+.wrapper {
+    height: 100vh;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 3em 0 6em;
+}
+
+header nav ul {
+    
+    display: flex;
+   
+}
+header nav ul li {
+    list-style-type: none;
+    margin: 0 20px;
+   
+   
+}
+header nav ul li a {
+    text-decoration: none;
+    color: #777c85;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+
+}
+header nav ul li:nth-child(1) a {
+    color: #4e5dc0;
+}
+/* #a1 {
+    color: #4e5dc0;
+} */
+.logo {
+    height: 5.2rem;
+    width: 6rem;
+
+}
+.logo img {
+    width: 100%;
+    height: 100%;
+   
+}
+.btn p {
+    color: #fff;
+    background-color: #4e5dc0;
+    padding: 14px 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    font-weight: 700;
+    line-height: 24px;
+    cursor: pointer;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px,1fr));
+    grid-template-rows:  repeat(2, minmax(150px,1fr));
+    overflow: hidden;
+    padding: 2em 6em 0 6em;
+    gap: 3rem;
+    margin: 4em auto;
+    max-width: 1080px
+    
+}
+.container .texts {
+    margin-top: 2em;
+  }
+  .container .texts hr {
+    width: 14em;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    margin: 1.25em 0;
+  }
+  
+.head {
+    font-family: "roboto";
+    font-style: normal;
+    
+    font-weight: 700;
+    line-height: 45px;
+    font-size: 38px;
+   color: #16171c;
+}
+.para {
+   font-family: "Raleway";
+     font-style: normal;
+     font-weight: 500;
+    line-height: 34px;  
+    color: #808080;
+    font-size: 20px;
+}
+.imgContainer { 
+    overflow: hidden;
+    object-fit: cover;
+    padding: 8px;
+
+}
+.imgContainer img {
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+}
+.image1 {
+    width: 32em;
+    height: 25em;
+}
+.image2 {
+    width: 27em;
+    height: 27em;
+}
+/* Footer  */
+footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 2em 3em 0 2em;
+}
+footer h3 {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #4e5dc0;
+    margin-bottom: 1rem;
+
+}
+.policy {
+    
+    margin: 3rem 0 1rem 0;
+    text-decoration: underline;
+}
+footer p {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+     line-height: 32px;
+    color: #999999;
+    margin-bottom: 2.5rem;
+
+}
+footer ul li {
+    list-style-type: none;
+}
+footer ul li a {
+    text-decoration: none;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 32px;
+    color: #999999;
+}
+.footer4 span {
+    width: 48px;
+    height: 48px;
+    background-color:#4e5dc0 ;
+   border-radius: 50%;
+   color: #fff;
+   font-weight: 900;
+   position: relative;
+   font-size: 16px;
+   display: inline-block;
+}
+.footer4 span i {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+}
+
