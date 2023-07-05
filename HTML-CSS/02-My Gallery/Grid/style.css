@@ -82,6 +82,24 @@
         transform: translateY(-50%) rotate(360deg) skew(-10deg);
         transition: 1s;
       }
+      @media screen and (max-width: 600px) {
+        .container {
+          display: grid;
+          grid-template-columns: 1fr;
+          column-gap: 0px;
+          width: 100%;
+        }
+        .card {
+          width: 100%;
+          padding: 5px;
+          
+        }
+        .card img {
+          height: 90%;
+     
+        }
+        
+      }
 
       
      
