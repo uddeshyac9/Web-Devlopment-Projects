@@ -80,3 +80,16 @@ body {
     transform: translateY(-50%) rotate(360deg); */
     transition: 1s;
 }
+@media screen and (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .card {
+    width: 100%;
+    padding: 5px;
+    
+  }
+  
+}
