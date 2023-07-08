@@ -1,0 +1,706 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    font-family: "Be Vietnam Pro", sans-serif;
+  scroll-behavior: smooth;
+}
+:root {
+  --bgOrange: #e84949;
+}
+      #wrapper {
+        height: 100vh;
+        /* width: 100vw; */
+        overflow-y:auto;
+        overflow-x: hidden;
+        
+      }
+      .container {
+        width:1200px;
+        margin:0 auto;
+      }
+      .nav-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1rem;
+      }
+      .logo {
+        width: 80px;
+      }
+      .logo-text {
+        margin-left: -1.2rem;
+        font-size: 28px;
+      }
+      .logo-container {
+        display: flex;
+        align-items: center;
+      }
+      .nav-items {
+        display: flex;
+        gap: 2rem;
+        padding: 0 4em;
+      }
+      .nav-items > div { 
+        font-size: 20px;
+        font-weight: 500;
+        cursor: pointer;
+       
+
+      }
+      
+      a {
+        text-decoration: none;
+      }
+      .nav-items > div > a {
+     color: black;
+      }
+      .nav-items > div:hover {
+         font-weight: bold;
+         transition: 0.8s;
+
+      }
+      .hero-section {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+        margin: 4rem auto;
+        padding: 0 1rem;
+        padding-bottom: 8rem;
+      }
+      .fadded-text {
+        position: absolute;
+        bottom: -16%;
+        left: -5%;
+        font-weight: bold;
+        font-size: 7rem;
+        user-select: none;
+        color:rgb(231,231,231);
+        transition: all 3s;
+      }
+      .hero-section-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+      }
+      .hero-section-heading {
+        font-size: 35px;
+        color: #343d68;
+        font-weight: 500;
+      }
+      .role{
+        color: #4e45d5; 
+         font-weight: 800;
+    }
+    .hero-section-sub-heading{
+      font-size: 45px;
+      line-height: 45px;
+  }
+  .hero-section-description{
+    margin-top: 1rem;
+    width: 70%;
+    font-weight: 500;
+}
+.btn {
+   
+  width: fit-content; 
+  background-color: #e84949;
+  color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+  z-index: 1;   
+  padding: 0.8rem 2.3rem;
+  font-size: 18px;
+  
+  
+  position: relative;
+ }
+
+ .btn::before {
+   content: "";
+   background-color: #fff;
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0; 
+   left: 0;
+   transform: scaleX(0);
+   z-index: -1;
+   transform-origin: left;
+   transition: 0.8s;
+ }
+ .btn:hover::before {
+   transform: scale(1);
+ }
+ .btn:hover {
+   transition: 0.8s;
+   color: #e84949;
+   box-shadow: 5px 5px 7px 0px #00003f;
+   cursor: pointer;
+ }
+ 
+ .hero-section-right {
+  position: relative;
+ }
+ .absolute {
+  position: absolute;
+ }
+ .user-image {
+  filter: grayscale(1);
+  padding: 2.5rem;
+  transition: all 1s;
+  animation: scaleImage 5s linear infinite;
+  
+ }
+ .user-image > img {
+  z-index: -1;
+
+ }
+ @keyframes scaleImage {
+  0% {
+    filter: grayscale(0);
+    transform: scale(1);
+
+  }
+  50% {
+    filter: grayscale(1);
+    transform: scale(1.1);
+    box-shadow: 3px 3px 10px black;
+
+  }
+  100% {
+    transform: scale(1);
+    filter: grayscale(0);
+
+  }
+ }
+ .icon-dots {
+  z-index: 1;
+  bottom: -1rem;
+  right: 0;
+  animation-name: dotanimation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+
+ }
+ @keyframes dotanimation {
+  0% {
+   transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+ } 
+ .icon-cube {
+  z-index: 1;
+  top: -1rem;
+  right: 1rem;
+  animation-name: cubeRotate;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+
+ }
+ @keyframes cubeRotate {
+  0% {
+    
+   transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-12px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+  }
+ }
+ .icon-circle {
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  animation-name: circleanimation;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  
+
+ }
+ @keyframes circleanimation {
+  0% {
+  
+  }
+  50% {
+    left: 5%;
+    bottom: 10%;
+  }
+  100% {
+    
+  }
+ }
+ .icon-plus {
+  z-index: 1;
+  top: -1rem;
+  left: 50%;
+  animation-name: plusanimation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+
+ }
+ @keyframes plusanimation {
+  0% {
+   transform: translateY(0);
+  }
+  50% {
+    top:3%;
+    left:48%
+  }
+  100% {
+    transform: translateY(0);
+  }
+ }
+ .icon-zigzag {
+  z-index: 1;
+  top: 1.5em;
+  left: -0.3em;
+  
+  animation-name: Zigzaganimation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+
+ }
+ @keyframes Zigzaganimation {
+  0% {
+   transform: translateY(0);
+  }
+  50% {
+    left:5%;
+        top:2%;
+    
+  }
+  100% {
+    transform: translateX(0);
+  }
+ }
+ .project-section {
+  background-color: rgb(231,231,231);
+  margin-top: 4rem;
+ }
+ .page-header {
+  color:var(--bgOrange);
+  font-size: 90px;
+  text-align: center ;     
+  padding-top: 30px;        
+
+ }
+ .project-container {
+  max-width: 1200PX;
+  margin: 0 auto;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+ }
+ .project-card {
+  position: relative;
+  width: 90%;
+  height: 550px;
+  /* display: flex; */
+  background-image: url(./Images/projects/Project1.png);
+  background-size: cover;
+  box-shadow: 0px 0px 40px #1f1f1f;
+  /* object-fit: cover; */
+ }
+ .project-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1f1f1f9a;
+  z-index: 0;
+  /* transform: scaleX(0); */
+ }
+ .project-card::before {
+  content:"";
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, #343d68, #343d68be, #343d687c);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.4s;
+  z-index: 1;
+
+ }
+ .project-card:hover::before {
+  transform: scale(1);
+ } 
+  .project-Number {
+    position: absolute;
+    font-size: 200px;
+    font-weight: 600;
+    color: #fff;
+    z-index: 2;
+    display: none;
+    /* opacity: 0; */
+  }
+  .project-card:hover .project-Number {
+    
+    transition: 0.5s;
+    display: block;
+    /* opacity: 1; */
+   
+  }
+  .rightNumber {
+    right: -40px;
+    top: -45px;
+  }
+  .leftNumber {
+    left: -40px;
+    top: -45px;
+  }
+  .projectContent {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 20%;
+    z-index: 5;
+    color: white;
+    padding: 2em;
+    gap: 1em;
+    transition: all 0.4s;
+  }
+  .project-content-left {
+    left: 10%;
+  }
+  .Project-Content-right {
+    right: 10%;
+  }
+  .projectSkillsContainer {
+    display: flex;
+    width: 60%;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .projectSkill {
+    width: 40px;
+  }
+  .projectHeading {
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 3rem;
+  }
+  .projectSubHeading {
+    width:70%;
+    font-size:16px;
+    font-style: italic;
+    
+  }
+  .btnGroup {
+    display:flex;
+    gap:1rem;
+    align-items:center;
+  }
+
+  .btnProject {
+    border: none;
+   
+  }
+  .icon{
+    cursor:pointer;
+    color:white;
+    font-size:35px;
+    transition:all 0.4s;
+  }
+  .icon:hover{
+    color:var(--bgOrange);
+  }
+  .project-card:hover .projectContent { 
+    transform: scale(1.2);
+
+  }
+  #project1 {
+    background-image: url(Images/projects/Project1.png);
+
+  }
+  #project2 {
+    background-image: url(Images/projects/Project2.png);
+    margin-left: 120px;
+
+  }
+  #project3 {
+    background-image: url(Images/projects/Project3.png);
+
+  }
+  #project4 {
+    background-image: url(Images/projects/Project4.png);
+    margin-left: 120px;
+
+  }
+  /* media-queries */
+  @media (max-width:1300px) {
+    .project-container {
+      padding: 5px;
+      margin: 10px;
+      gap: 60px;
+    }
+    .page-header {
+      padding-top: 30px;
+      color: var(--bgOrange);
+      text-align: center;
+      font-size: 40px;
+      
+    }
+
+    .projectHeading {
+      font-size: 40px;
+      width: 100%;
+    }
+    .projectSubHeading {
+      width: 100%;
+     }
+     .project-content-left {
+      left: 0;
+    }
+   .Project-Content-right {
+    right: 0;
+   }
+    #project2 {
+    margin-left: 0;
+  }
+  #project4 {
+    margin-left: 0;
+  }
+   .projectSkillsContainer {
+    width: 100%;
+  }
+  .projectSkill {
+    width: 35px;
+  }
+  .project-card {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+  }
+  .projectContent {
+    scale: 0.8;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+  .project-card:hover .projectContent { 
+   
+    display: none;
+
+  }
+  .project-card:hover .projectContent { 
+    transform: scale(0.55);
+
+  }
+  .project-Number {
+    font-size: 100px;
+    
+  }
+  .project-Number {
+    font-size: 100px;
+    
+  }
+  }
+  .skills-container {
+    display: flex;
+    position: relative;
+    gap: 30px;
+    margin: 10rem auto;
+    padding: 5rem;
+  }
+  .skills-container-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  }
+  .skills-container-right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 50%;
+    position: relative;
+    gap: 2rem;
+  }
+  .skills-fade-text {
+    position: absolute;
+   
+    right: -10%;
+    bottom: -30.5%;
+    font-weight: bold;
+       font-size: 15em;
+       user-select: none;
+       color:rgb(231,231,231);
+       transition: all 3s;
+       overflow-y: hidden;
+       
+
+  }
+  .blobStyle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  transform: translate(-50%, -50%);
+  animation: blobAnimate 3s linear infinite;
+  z-index: -1;
+  }
+  @keyframes blobAnimate {
+    50% {
+      top: 54%;
+      left: 46%;
+    }
+  }
+  .skillsLogo {
+    width: 80px;
+    transition: all 0.5s;
+
+  }
+  .skillsLogo:hover {
+    transform: scale(1.2);
+  }
+  .skillHeading {
+    font-size: 50px;
+    font-style: bold;
+    color: var(--bgOrange)
+
+  }
+  .cap {
+    font-size: 90px;
+  }
+  .skillSubHeading {
+    margin-top: 1rem;
+    text-align: justify;
+    width: 85%;
+
+  }
+  .skillSubHeading > p{
+    margin: 15px 0;
+  }
+  /* Contact Me Section Start  */
+.contactMeSection {
+  width: 100%;
+  background-color: #e7e7e7;
+  margin-top: 50px;
+}
+
+
+
+.container h2 {
+  font-size: 5em;
+  padding-top: 2rem;
+  color: #e84949;
+}
+
+.container h3 {
+  font-size: 3em;
+  color: #343d68aa;
+}
+
+.contactUsForm {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactUsForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+/* 
+.formFieldContainer{
+  width: 100%;
+} */
+
+.formField {
+  width: 100%;
+  height: 42px;
+  padding: 0 2rem;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px #1f1f1f;
+  background: #ffffff97;
+  font-weight: 500;
+}
+
+.formfield:focus {
+  border: none;
+}
+
+.formFieldContainer textarea {
+  height: auto;
+  padding-top: 1rem;
+}
+
+.formBtn .btn {
+  transition: 0.5s;
+  border: none;
+  font-size: 1.4rem;
+  margin: 1rem 0;
+}
+
+.formBtn .btn:hover {
+  transform: scale(0.9);
+}
+
+.formBtn .btn i {
+  padding: 0 1rem;
+  font-size: 1.5rem;
+}
+
+footer {
+  background: #343d68;
+  position: relative;
+  padding: 5rem;
+}
+.footerFadedText {
+  font-size: 5em;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: #535c87;
+  user-select: none;
+}
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem;
+}
+.linkContainer {
+  
+  display: flex;
+  gap: 1.2em;
+}
+.linkContainer div a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.6s;
+}
+.linkContainer div a:hover{
+  color: #e84949;
+}
+.iconContainer{
+  display: flex;
+  gap: 1rem;
+}
