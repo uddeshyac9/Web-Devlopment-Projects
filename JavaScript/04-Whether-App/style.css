@@ -236,7 +236,7 @@
     object-fit: cover;
 }
 /* media queries */
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 480px) {
     .tabContainer {
         flex-direction: column;
         gap: 5px;
@@ -272,7 +272,7 @@
         max-width: 100%;
     }
     .parameterContainer {
-        gap: 5px 10px;
+        gap: 10px 10px;
         align-items: center;
         margin: 1.2rem auto 0;
         flex-direction: column;
