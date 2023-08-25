@@ -1,0 +1,298 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Merriweather Sans", sans-serif;
+}
+:root {
+    --colorDark1: #112d4e;
+    --colorDark2: #3f72af;
+    --colorLight1: #dbe2ef;
+    --colorLight2: #f9f7f7;
+}
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    color: var(--colorLight2);
+    background-color: #112d4e;
+    background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+}
+/* Heading and Tab Container */
+ h1 {
+    text-align: center;
+    text-transform: uppercase;
+    word-spacing: 2px;
+    letter-spacing: 1.75px;
+    margin-block: 2rem;
+ }
+ .tabContainer {
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+ }
+ .tab {
+    cursor:pointer;
+    font-size: 0.875rem;
+    letter-spacing: 1.75px;
+    padding: 5px 8px;
+    text-transform: capitalize;
+
+ }
+ .tab.currentTab {
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 4px;
+}
+/* Heading and Tab Container End*/
+
+/* Main Container */
+.container {
+    margin-block: 4rem;
+}
+.btn {
+    all: unset;
+    cursor: pointer;
+    padding: 10px 30px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    background-color: var(--colorDark2);
+}
+.subContainer {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Form Container */
+.formContainer {
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 0 10px;
+
+}
+.formContainer.active {
+    display: flex;
+}
+.formContainer input {
+    all: unset;
+    width: calc(100% - 80px);
+    height: 40px;
+    padding: 0 20px;
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 10px;
+}
+.formContainer input:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.7);
+}
+.formContainer input::placeholder {
+    color : rgba(255, 255, 255, 0.7);
+}
+
+.formContainer .btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: unset;
+}
+.formContainer .btn img {
+    object-fit: contain;
+}
+/* Form Container End*/
+
+/* grant Location  */
+
+.grantLocationContainer {
+    display: none;
+}
+.grantLocationContainer.active {
+    display: flex;
+}
+.grantLocationContainer img {
+    margin-bottom: 1.5rem;
+}
+
+.grantLocationContainer p:first-of-type {
+    font-weight: 600; 
+    font-size: 1.75rem;
+    text-align: center;
+}
+.grantLocationContainer p:last-of-type {
+    font-size: 0.75rem;
+    text-align: center;
+    margin-top: 0.75rem;
+    margin-bottom: 1.75rem;
+    font-weight: 300;
+    letter-spacing: 0.75px;
+}
+/* Grant Location End  */
+
+/* loadingContainer */
+.loadingContainer {
+    display: none;
+}
+.loadingContainer.active {
+    display: flex;
+}
+.loadingContainer p {
+    text-transform: uppercase;
+}
+/* userInfoContainer */
+.userInfoContainer  {
+    display: none;
+}
+.userInfoContainer.active {
+    display: flex;
+}
+.userInfoContainer p {
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+.userInfoContainer img {
+    height: 70px;
+    width: 70px;
+}
+.name {
+    display:flex;
+    align-items: center;
+    gap: 0 0.5rem;
+    margin-bottom: 0.7rem;
+}
+.name img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+.userInfoContainer p[data-temp] {
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+.parameterContainer {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    gap: 10px 20px;
+    margin: 1.6rem auto 0;
+    flex-wrap: wrap;
+}
+.parameter {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.8rem;
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 5px;
+    width: 30%;
+    max-width: 200px;
+    gap: 5px 0;
+}
+.parameter p {
+    font-size: 1rem;
+    font-size: 600;
+    text-transform: uppercase;
+}
+
+.parameter img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+.parameterValue {
+    font-size: 0.8rem;
+    font-weight: 200;
+}
+
+/* error-container */
+.errorContainer {
+    display: none;
+}
+.errorContainer.active {
+    display: flex;
+    gap: 1rem 0;
+}
+.errorContainer p {
+    text-align: center;
+}
+.errorContainer img {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+/* media queries */
+@media screen and (max-width: 360px) {
+    .tabContainer {
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+        margin-top: 1rem;
+    }
+    .tab {
+        padding: 3px 5px;
+        font-size: 0.75rem;
+    }
+    .subContainer {
+        width: 100%;
+        padding: 0 1rem;
+    }
+    .formContainer,
+    .grantLocationContainer,
+    .userInfoContainer,
+    .parameterContainer,
+    .errorContainer {
+        width: 100%;
+        max-width: 100%;
+    }
+    .formContainer input {
+        width: 70%;
+        padding: 0 10px;
+    }
+    .btn {
+        font-size: 0.75rem;
+        padding: 8px 20px;
+    }
+    .grantLocationContainer img {
+        margin-bottom: 1rem;
+        max-width: 100%;
+    }
+    .parameterContainer {
+        gap: 5px 10px;
+        align-items: center;
+        margin: 1.2rem auto 0;
+        flex-direction: column;
+    }
+    .parameter {
+        width: 45%;
+        max-width: 150px;
+        padding: 0.5rem;
+        
+    }
+    .parameter p {
+        font-size: 0.8rem;
+    }
+    .parameterValue {
+        font-size: 0.7rem;
+    }
+    .errorContainer p {
+        font-size: 0.75rem;
+    }
+    .errorContainer img {
+        max-width: 200px;
+    }
+}
