@@ -236,7 +236,7 @@
     object-fit: cover;
 }
 /* media queries */
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 380px) {
     .tabContainer {
         flex-direction: column;
         gap: 5px;
