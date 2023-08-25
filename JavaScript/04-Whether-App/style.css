@@ -239,13 +239,13 @@
 @media screen and (max-width: 480px) {
     .tabContainer {
         flex-direction: column;
-        gap: 5px;
+        gap: 10px;
         align-items: center;
         margin-top: 1rem;
     }
     .tab {
         padding: 3px 5px;
-        font-size: 0.75rem;
+        font-size: 1rem;
     }
     .subContainer {
         width: 100%;
