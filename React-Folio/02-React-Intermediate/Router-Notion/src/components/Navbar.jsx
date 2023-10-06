@@ -1,47 +1,71 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/Logo.svg"
 import toast from 'react-hot-toast';
+import { AiOutlineMenu } from "react-icons/ai";
 
 function Navbar(props) {
    let   isLoggedin = props.isLoggedin;
    let  setIsLoggedin = props.setIsLoggedin;
+   const [showMenu, setShowMenu] = useState(false);
     return (
-        <div className="flex justify-between items-center w-11/12 max-w-[1160px] py-4 mx-auto">
+        <div className="flex justify-between items-center w-11/12 max-w-[1160px] py-4 mx-auto flex-wrap">
         <Link to="/">
           <img src={logo} height={32} width={160} loading="lazy" />
         </Link>
-        <nav className=''>
-            <ul className='flex gap-3'>
-                <li>
-                    <Link to="/">Home</Link>
-                </li>
-                <li>
-                    <Link to="/about">About</Link>
-                </li>
-                <li>
-                    <Link to="/contact">Contact</Link>
-                </li>
-            </ul>
-        </nav>
-        {/* login-signup-logout-dashboard */}
-        <div>
+        <button
+        className="md:hidden block text-richblack-100"
+        onClick={() => setShowMenu(!showMenu)}
+      >
+        <AiOutlineMenu/>
+      </button>
+      
+      <nav className="md:flex">
+        { showMenu ? (
+          
+          <ul className="flex flex-col  z-10  gap-y-2 text-richblack-100">
+            <li>
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/about">About</NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact">Contact</NavLink>
+            </li>
+          </ul>
+        ) :   
+        <nav className='hidden md:flex'>
+        <ul className='flex gap-x-6 text-richblack-100'>
+            <li>
+                <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+                <NavLink to="/about">About</NavLink>
+            </li>
+            <li>
+                <NavLink to="/contact">Contact</NavLink>
+            </li>
+        </ul>
+    </nav>}
+      </nav>
+        <div className='flex items-center gap-x-4 text-richblack-100'>
            { !isLoggedin &&
 
-            <Link to="/login"> <button>Login</button> </Link>
+            <NavLink to="/login"> <button className='bg-richblack-800 py-[8px] px-[12px] rounded-[8px] border border-richblack-700'>Login</button> </NavLink>
         }            {
             !isLoggedin &&
-            <Link to="/signup"> <button>SignUp</button> </Link>
+            <NavLink to="/signup"> <button className='bg-richblack-800 py-[8px] px-[12px] rounded-[8px] border border-richblack-700'>SignUp</button> </NavLink>
         }            {
             isLoggedin &&
-            <Link to="/"> <button onClick={() =>  {
+            <Link to="/"> <button className='bg-richblack-800 py-[8px] px-[12px] rounded-[8px] border border-richblack-700' onClick={() =>  {
                 setIsLoggedin(false);
                 toast.success("Logout Successfully ")
             }}
             >Logout</button> </Link>
         }            {
             isLoggedin &&
-            <Link to="/dashboard"> <button>Dashboard</button> </Link>
+            <NavLink to="/dashboard"> <button className='bg-richblack-800 py-[8px] px-[12px] rounded-[8px] border border-richblack-700'>Dashboard</button> </NavLink>
         }
         </div>
         

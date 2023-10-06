@@ -10,7 +10,7 @@ function SignUp({setIsLoggedin}) {
               desc1="Build skills for today, tomorrow, and beyond."
               desc2="Education to future-proof your career."
               image={signupImg}
-              formtype="signup"
+              formType="signup"
               setIsLoggedin={setIsLoggedin} />
         </div>
         

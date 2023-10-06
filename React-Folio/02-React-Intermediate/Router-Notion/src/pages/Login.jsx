@@ -9,7 +9,7 @@ function Login({setIsLoggedin}) {
             desc1="Build skills for today, tomorrow, and beyond."
             desc2="Education to future-proof your career."
             image={loginImg}
-            formtype={"login"}
+            formType={"login"}
             setIsLoggedin={setIsLoggedin}
             />
         </div>
